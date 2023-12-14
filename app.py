@@ -7,10 +7,10 @@ secret_key = secrets.token_hex(16)
 app.secret_key = secret_key
 
 
-@app.route('/api')
+@app.route('/')
 def hello_world():
     # print(f"Generated secret key: {secret_key}")
-    return 'Hello world!'
+    return render_template('register.html')
 
 users = []
 # Registration page
